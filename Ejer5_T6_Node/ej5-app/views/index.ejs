@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>Lista desde el servidor</h1>
+
+    <h2>Ciudades</h2>
+    <ul>
+      <% items.forEach(i => { %>
+        <li><%= i %></li>
+      <% }) %>
+    </ul>
+
+    <h2>Imágenes</h2>
+    <div style="display:flex; gap:12px; flex-wrap:wrap">
+      <% images.forEach(src => { %>
+        <img src="<%= src %>" alt="" width="300" height="180">
+      <% }) %>
+    </div>
+
+    <p style="margin-top:20px">
+      <a href="/login"><button>Ir a Login</button></a>
+    </p>
+  </body>
+</html>
+
